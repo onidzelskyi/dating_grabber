@@ -5,3 +5,4 @@ manage.py>=0.2
 scrapy
 sqlalchemy
 sqlalchemy-migrate>=0.11
+mysql-connector>=2.1
