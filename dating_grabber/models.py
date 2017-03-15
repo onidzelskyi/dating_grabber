@@ -51,6 +51,9 @@ class User(Base):
         """User' object representation format."""
         return '<{self.name}, {self.age}>'.format(self=self)
 
+    __table_args__ = ({'mysql_engine': 'InnoDB',
+                       'mysql_charset': 'utf8mb4'},)
+
 
 class Image(Base):
     """Class Image keeps user' images."""
@@ -68,6 +71,9 @@ class Image(Base):
 
     def __repr__(self):
         return self.url
+
+    __table_args__ = ({'mysql_engine': 'InnoDB',
+                       'mysql_charset': 'utf8mb4'},)
 
 
 class Question(Base):
@@ -92,6 +98,9 @@ class Question(Base):
     def __repr__(self):
         return self.text
 
+    __table_args__ = ({'mysql_engine': 'InnoDB',
+                       'mysql_charset': 'utf8mb4'},)
+
 
 class Choice(Base):
     """Class Choice keeps user' choices for question."""
@@ -114,3 +123,6 @@ class Choice(Base):
 
     def __repr__(self):
         return self.text
+
+    __table_args__ = ({'mysql_engine': 'InnoDB',
+                       'mysql_charset': 'utf8mb4'},)
