@@ -1,0 +1,6 @@
+selenium>=3.0
+pytest>=3.0
+flake8>=3.3
+manage.py>=0.2
+scrapy
+sqlalchemy-migrate>=0.11
