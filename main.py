@@ -12,7 +12,7 @@ from sqlalchemy import create_engine
 import time
 import logging
 
-from dating_grabber.models import logger, Question, User, Image, Choice, config
+from dating_grabber.models import logger, Question, User, Image, Choice, config, engine
 
 
 timeout = config.getint('general', 'timeout')
@@ -23,7 +23,7 @@ xpath_next_question = '//div[@class="question_module__next"]'
 LOGGER.setLevel(logging.WARNING)
 driver = webdriver.Firefox()
 
-engine = create_engine(config.get('sqlalchemy', 'local_db_uri'))
+# engine = create_engine(config.get('sqlalchemy', 'local_db_uri'))
 connection = engine.connect()
 Session = sessionmaker()
 session = Session(bind=connection)
