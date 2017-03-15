@@ -6,3 +6,4 @@ scrapy
 sqlalchemy
 sqlalchemy-migrate>=0.11
 mysql-connector>=2.1
+pyvirtualdisplay

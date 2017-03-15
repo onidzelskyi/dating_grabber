@@ -2,12 +2,13 @@
 from selenium import webdriver
 from selenium.webdriver.remote.remote_connection import LOGGER
 
+from pyvirtualdisplay import Display
+
 from scrapy import Selector
 
 from sqlalchemy import and_
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.exc import IntegrityError
-from sqlalchemy import create_engine
 
 import time
 import logging
@@ -21,9 +22,12 @@ xpath_comments = '//ul[@class="answers-container"]/li[@class="comment"]'
 xpath_next_question = '//div[@class="question_module__next"]'
 
 LOGGER.setLevel(logging.WARNING)
+
+# Run without GUI
+display = Display(visible=0, size=(800, 800))
+display.start()
 driver = webdriver.Firefox()
 
-# engine = create_engine(config.get('sqlalchemy', 'local_db_uri'))
 connection = engine.connect()
 Session = sessionmaker()
 session = Session(bind=connection)
