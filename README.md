@@ -86,6 +86,18 @@ pip install -e .
 pytest tests
 ```
 
+## Download firefox driver ##
+
+```bash
+http://selenium-python.readthedocs.io/installation.html#drivers
+```
+
+## Install firefox browser (ubuntu)##
+
+```bash
+sudo apt install firefox
+```
+
 ## Add PATH environment for selenium firefox driver ##
 
 ```bash
