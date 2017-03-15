@@ -17,7 +17,7 @@ logging.basicConfig(level=logging.DEBUG,
 logger = logging.getLogger(__name__)
 
 config = configparser.ConfigParser()
-config.read('{}/config.cfg'.format(os.getcwd()))
+config.read(['{}/config.cfg'.format(os.getcwd()), '{}/../config.cfg'.format(os.path.dirname(__file__))])
 
 Base = declarative_base()
 engine = create_engine(config.get('sqlalchemy', 'local_db_uri'))

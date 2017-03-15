@@ -54,7 +54,7 @@ class ModelTest(TestCase):
         """Add user and question adn check her relationships with other tables.
         She must have one question in questions table."""
         user = User(self.user_name, self.user_age)
-        question = Question(self.question_text)
+        question = Question(self.question_text, 0)
         user.questions = [question]
 
         assert len(user.questions) == 1
@@ -69,7 +69,7 @@ class ModelTest(TestCase):
         She must have one question in questions table.
         After deleting user questions table must be empty."""
         user = User(self.user_name, self.user_age)
-        question = Question(self.question_text)
+        question = Question(self.question_text, 0)
         user.questions = [question]
 
         self.session.add(user)
