@@ -92,7 +92,7 @@ pytest tests
 http://selenium-python.readthedocs.io/installation.html#drivers
 ```
 
-## Install firefox browser (ubuntu)##
+## Install firefox browser (ubuntu) ##
 
 ```bash
 sudo apt install firefox
