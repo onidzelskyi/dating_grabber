@@ -55,6 +55,12 @@ Run script
 . ~/.local/bin/virtualenvwrapper.sh
 ```
 
+Clone git repository
+
+```bash
+git clone https://github.com/onidzelskyi/dating_grabber.git
+```
+
 Create virtual environment
 
 ```bash
@@ -64,6 +70,7 @@ mkvirtualenv -p python3.5 dating_grabber
 ## Install dependencies ##
 
 ```bash
+cd dating_grabber
 pip install -r requirements.txt
 ```
 

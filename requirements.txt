@@ -3,4 +3,5 @@ pytest>=3.0
 flake8>=3.3
 manage.py>=0.2
 scrapy
+sqlalchemy
 sqlalchemy-migrate>=0.11
