@@ -2,7 +2,7 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import create_engine
+# from sqlalchemy import create_engine
 
 import os
 import logging
@@ -20,7 +20,7 @@ config = configparser.ConfigParser()
 config.read(['{}/config.cfg'.format(os.getcwd()), '{}/../config.cfg'.format(os.path.dirname(__file__))])
 
 Base = declarative_base()
-engine = create_engine(config.get('sqlalchemy', 'local_db_uri'))
+# engine = create_engine(config.get('sqlalchemy', 'local_db_uri'))
 
 
 class User(Base):
