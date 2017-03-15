@@ -47,7 +47,7 @@ class User(Base):
         self.age = age
         self.page = page
 
-    def __repr__(self):
+    def __str__(self):
         """User' object representation format."""
         return '<{self.name}, {self.age}>'.format(self=self)
 
@@ -69,7 +69,7 @@ class Image(Base):
         @:arg url - image url as a string."""
         self.url = url
 
-    def __repr__(self):
+    def __str__(self):
         return self.url
 
     __table_args__ = ({'mysql_engine': 'InnoDB',
@@ -95,7 +95,7 @@ class Question(Base):
         self.text = text
         self.likes = likes
 
-    def __repr__(self):
+    def __str__(self):
         return self.text
 
     __table_args__ = ({'mysql_engine': 'InnoDB',
@@ -121,7 +121,7 @@ class Choice(Base):
         self.text = text
         self.likes = likes
 
-    def __repr__(self):
+    def __str__(self):
         return self.text
 
     __table_args__ = ({'mysql_engine': 'InnoDB',
