@@ -86,6 +86,12 @@ pip install -e .
 pytest tests
 ```
 
+## Add PATH environment for selenium firefox driver ##
+
+```bash
+export PATH=$PATH:`$(pwd)`
+```
+
 ## Run questionary grabber ##
 
 ```bash

@@ -4,6 +4,7 @@ from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
 
+import os
 import logging
 import configparser
 
@@ -16,7 +17,7 @@ logging.basicConfig(level=logging.DEBUG,
 logger = logging.getLogger(__name__)
 
 config = configparser.ConfigParser()
-config.read('/Users/alex/Documents/Research/dating_grabber/config.cfg')
+config.read('{}/config.cfg'.format(os.getcwd()))
 
 Base = declarative_base()
 engine = create_engine(config.get('sqlalchemy', 'local_db_uri'))
